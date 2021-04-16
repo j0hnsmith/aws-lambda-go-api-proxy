@@ -34,6 +34,7 @@ var _ = Describe("HTTPAdapter tests", func() {
 
 			Expect(err).To(BeNil())
 			Expect(resp.StatusCode).To(Equal(200))
+			Expect(resp.Headers).NotTo(BeNil())
 
 			resp, err = adapter.Proxy(req)
 
